@@ -1,0 +1,139 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0px;
+  background-color: transparent;
+  transition: background-color 0.3s, padding 0.3s;
+  z-index: 1000;
+}
+
+.header.scrolled {
+  padding: 10px 5px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  transition: width 0.3s, height 0.3s, transform 4s;
+  padding: 5px;
+  margin: 5px;
+  width: 60px;
+  height: 60px;
+}
+
+.logo.small {
+  width: 40px;
+  height: 40px;
+  transform: rotate(180deg);
+  transition: 2s;
+}
+
+.site-name {
+  font-size: 34px;
+  margin-left: 10px;
+  color: white;
+  font-family: "Arial", sans-serif;
+  transition: opacity 0.1s, transform 4s;
+}
+
+.header.scrolled .site-name {
+  opacity: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-weight: bold;
+}
+
+.nav-items li a:hover {
+  color: #007bff;
+}
+
+.menu-button {
+  display: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+  color: whitesmoke;
+  padding: 0px;
+  border: 1px solid rgba(245, 245, 245, 0.479);
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 2s;
+  transition: opacity 0.1s, transform 4s;
+}
+
+.header.scrolled .menu-button {
+  display: block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  border-radius: 8px;
+  padding: 7px 5px;
+  transition: all 2s ease-in;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  margin: 15px 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(245, 245, 245, 0.479);
+  background-color: transparent;
+  text-align: center;
+}
+
+.dropdown-menu a:hover {
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  color: white;
+}
+@media (max-width: 768px) {
+  .nav-items {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+    width: 80px;
+  }
+}
+.header.mobile .navbar {
+  display: block;
+}
+
+.header.mobile .dropdown-menu {
+  display: block;
+}

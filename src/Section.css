@@ -1,0 +1,111 @@
+/* General styles */
+.section {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    justify-content: center;
+  }
+  .info {
+    position: static;
+    transform: none;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+/* Info container */
+.info {
+  background: rgba(253, 253, 253, 0.15);
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.info h2 {
+  font-size: 2em;
+  font-family: "Caveat", serif;
+}
+
+.info p {
+  font-size: 1em;
+}
+
+.pra {
+  max-width: 90%;
+  margin: auto;
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.more a {
+  font-size: 1em;
+}
+
+.more img {
+  max-width: 50px;
+  height: auto;
+}
+
+.ticker {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  overflow: hidden;
+  height: 160px;
+  white-space: nowrap;
+}
+
+.ticker p {
+  display: inline-block;
+  animation: ticker-move 25s linear infinite;
+  font-size: 5vw;
+  font-family: "Alfa Slab One", serif;
+}
+
+@keyframes ticker-move {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 480px) {
+  .info {
+    width: 90%;
+  }
+  .info h2 {
+    font-size: 1.5em;
+  }
+  .info p {
+    font-size: 0.8em;
+  }
+  .more a {
+    font-size: 0.8em;
+  }
+  .more img {
+    max-width: 40px;
+  }
+  .ticker p {
+    font-size: 4.5vw;
+  }
+}

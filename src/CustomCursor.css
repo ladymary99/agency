@@ -1,0 +1,28 @@
+.cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid blue;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.1s;
+  z-index: 9999;
+}
+
+.cursor2 {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border: 1px solid blue;
+  background-color: blue;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.15s;
+  z-index: 9999;
+}

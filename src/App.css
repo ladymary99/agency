@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+h1 {
+  font-size: 36px;
+  color: #007bff;
+}
